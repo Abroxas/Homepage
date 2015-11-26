@@ -1,0 +1,122 @@
+.navbar {
+  margin-top: 20px;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: #5a5a5a;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.jumbotron {
+  background-image:url('images/jumbo2.jpg');
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top: 10px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Archivo Narrow', Arial, Helvetica, Verdana, sans-serif;;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.jumbotron a {
+  font-size: 20px;
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* Carousel base class */
+.carousel {
+  height: 400px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.carousel-caption a {
+    color: #393c3d;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 400px;
+  background-color: #777;
+}
+
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 400px;
+}
+
+.carousel-inner > .item > a > img {
+  width: 50%;
+  margin: auto;
+}
+
+.bioinf-guides {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.bioinf-guides h2 {
+  color: #393c3d;
+  font-size: 30px;
+}
+
+.bioinf-guides p {
+  margin-bottom: 13px;
+  font-size: 15px;
+}
+
+.bioinf-news {
+  background-color: #dedede;
+  margin-bottom: 20px;
+}
+
+.bioinf-news h2 {
+  color: #393c3d;
+  font-size: 30px;
+}
+
+.bioinf-news h3 {
+  font-family: 'Archivo Narrow', Arial, Helvetica, Verdana, sans-serif;;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bioinf-news a {
+  color: #000;
+}
+.bioinf-news a:hover {
+  color: #fff;
+}
