@@ -18,30 +18,30 @@ h1, h2, h3, h4, p, a {
   text-transform: uppercase;
 }
 
-.jumbotron {
+.jumboHeader {
   background-image:url('images/jumbo2.jpg');
   height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.jumbotron .container {
+.jumboHeader .container {
   position: relative;
   top: 10px;
 }
 
-.jumbotron h1 {
+.jumboHeader h1 {
   color: #fff;
   font-size: 48px;  
   font-weight: bold;
 }
 
-.jumbotron p {
+.jumboHeader p {
   font-size: 20px;
   color: #fff;
 }
 
-.jumbotron a {
+.jumboHeader a {
   font-size: 20px;
   text-decoration: underline;
   color: #fff;
