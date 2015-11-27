@@ -87,16 +87,17 @@ h1, h2, h3, h4, p, a {
   margin: auto;
 }
 
-.bioinf-guides {
+.bioinf-modules {
   border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 10px;
 }
 
-.bioinf-guides h2 {
+.bioinf-modules h2 {
   color: #393c3d;
   font-size: 30px;
 }
 
-.bioinf-guides p {
+.bioinf-modules p {
   margin-bottom: 13px;
   font-size: 15px;
 }
