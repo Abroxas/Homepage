@@ -26,7 +26,7 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				</button>
-			  </div>
+			  </div>  <!--/.navbar-header -->
 			  <div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 				  <li><a href="index.html">Home</a></li>
@@ -50,32 +50,30 @@
 	
 		<div class="container">
 			<div class="row">
-				<div class="col-md-10">
+				<div class="col-md-8">
 					<div class="wikiSearch">
 						<form action="http://www.wikipedia.org/search-redirect.php" method="get" target="_blank">
-							<div class="form">
-								<h1>Wikipedia Search</h1>
-								<fieldset>
-									<legend></legend>
-									<label for="search">Suchfeld:</label>
-									<input autofocus type="text" name="search" size="20" id="search"><br><br>
-									<input type="radio" name="language" value="de" id="de" checked>
-									<label for="de">Deutsch</label><br>
-									<input type="radio" name="language" value="en" id="en">
-									<label for="en">Englisch</label><br>
-								</fieldset>
-								<input type="submit" name="article" class="searchButton" id="submitArtSearch" value="Search Titles only">
-								<input type="submit" name="fulltext" class="searchButton" id="submitFullSearch" value="Search Full Articles">
-							</div>
+							<h1>Wikipedia Search</h1>
+							<fieldset>
+								<legend></legend>
+								<label for="search">Suchfeld:</label>
+								<input autofocus type="text" name="search" size="20" id="search"><br><br>
+								<input type="radio" name="language" value="de" id="de" checked>
+								<label for="de">German</label><br>
+								<input type="radio" name="language" value="en" id="en">
+								<label for="en">English</label><br><br>
+							</fieldset>
+							<input type="submit" name="article" class="searchButton" id="submitArtSearch" value="Search Titles only">&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="submit" name="fulltext" class="searchButton" id="submitFullSearch" value="Search Full Articles">
 						</form> 
 						<p>
-							<a href="http://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2.0 Level Triple-A Conformance" target="_blank">
-								<img height="32" width="88" src="http://www.w3.org/WAI/wcag2AA" alt="Level Triple-A conformance, W3C WAI Web Content Accessibility Guidelines 2.0">
+							<a href="http://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2.0 Level Double-A Conformance" target="_blank">
+								<img height="32" width="88" src="http://www.w3.org/WAI/wcag2AA" alt="Level Double-A conformance, W3C WAI Web Content Accessibility Guidelines 2.0">
 							</a>
 						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+					</div>  <!--/.wikiSearch -->
+				</div>  <!--/.col-md-8 -->
+			</div>  <!--/.row -->
+		</div>  <!--/.container -->
 	</body>
 </html>
