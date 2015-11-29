@@ -17,6 +17,11 @@
 		<!-- Javascript ================================================== -->
     	<script src="jquery-1.11.3/jquery.js"></script>
     	<script src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+		<script>
+			$(document).ready(function(){
+    			$('[data-toggle="tooltip"]').tooltip(); 
+			});
+		</script>
 	</head>
 
 	<body>
@@ -61,18 +66,18 @@
 							<fieldset>
 								<legend></legend>
 								<label for="search">Search Query:</label><br>
-								<input autofocus type="text" name="search" size="40" id="search"><br><br>
+								<input autofocus data-toggle="tooltip" title="Enter your search query here." data-placement="right" type="text" name="search" size="40" id="search"><br><br>
 								<input type="radio" name="language" value="de" id="de" checked>
-								<label for="de">German</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label data-toggle="tooltip" title="Check this button to search the german Wikipedia articles." data-placement="top" for="de">German</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<input type="radio" name="language" value="en" id="en">
-								<label for="en">English</label><br><br>
+								<label data-toggle="tooltip" title="Check this button to search the english Wikipedia articles." data-placement="top" for="en">English</label><br><br>
 							</fieldset>
 							<input type="submit" name="article" class="btn-primary" id="submitArtSearch" value="Search Titles only">&nbsp;&nbsp;&nbsp;&nbsp;
 							<input type="submit" name="fulltext" class="btn-primary" id="submitFullSearch" value="Search Full Articles">
 						</form> 
 						<p>
-							<a href="http://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2.0 Level Double-A Conformance" target="_blank">
-								<img height="32" width="88" src="http://www.w3.org/WAI/wcag2AA" alt="Level Double-A conformance, W3C WAI Web Content Accessibility Guidelines 2.0">
+							<a href="http://www.w3.org/WAI/WCAG2AAA-Conformance" title="Explanation of WCAG 2.0 Level Triple-A Conformance" target="_blank">
+								<img height="32" width="88" src="http://www.w3.org/WAI/wcag2AAA" alt="Level Tripple-A conformance, W3C WAI Web Content Accessibility Guidelines 2.0">
 							</a>
 						</p>
 					</div>  <!--/.wikiSearch -->
