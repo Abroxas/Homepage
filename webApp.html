@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>ARSnova statistics</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="Statistics of ARSnova updated every 30 seconds">
+		<meta name="author" content="Jannis Hochmuth">
+
+		<!-- CSS ================================================== -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="main.css">
+
+		<!-- Javascript ================================================== -->
+		<script src="jquery-1.11.3/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+		<script language="javascript" type="text/javascript" src="webApp.js"></script>		
+	</head>
+	
+	<body>
+		<div class="container">
+		  <nav class="navbar navbar-default">
+			<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+			  </div>
+			  <div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+				  <li><a href="index.html">Home</a></li>
+				  <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Solutions<span class="caret"></span></a>
+					<ul class="active dropdown-menu">
+					  <li><a href="wikiform.html">Wikipedia Search Form</a></li>
+					  <li class="active"><a href="webApp.html">ArsNova Statistics WebApp</a></li>
+					  <li><a href="https://github.com/rsng76/rubenibs/pulls?q=is%3Apr+is%3Aclosed" target="_blank">My created Pull Requests</a></li>
+					  <li><a href="https://github.com/Abroxas/Homepage/pulls?q=is%3Apr+is%3Aclosed" target="_blank">My accepted Pull Requests</a></li>
+					  <li><a href="https://www.codecademy.com/users/Abroxas" target="_blank">Codecademy completed skills</a></li>
+					</ul>
+				  </li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+				  <li><a href="imprint.html">Imprint</a></li>
+				</ul>
+			  </div>  <!--/.nav-collapse -->
+			</div>  <!--/.container-fluid -->
+		  </nav>  <!--/.nav-default -->
+		</div>  <!--/.container -->
+
+		<div id="appDiv">
+			<h1>ARSnova Statistics in a bar diagram</h1>
+			<canvas id="myChart"></canvas>
+		</div>
+	</body>
+</html>
