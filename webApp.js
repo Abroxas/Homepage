@@ -1,30 +1,51 @@
 var getStatistics = function() {
 
+	var jsonObj;
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET","https://arsnova.eu/api/statistics/", false);
-	xhr.send();
-	
-	var jsonObj = $.parseJSON(xhr.responseText);
-	var keys = Object.keys(jsonObj);
+	xhr.open("GET","https://arsnova.eu/api/statistics/", true);
 
-	var values = new Array();
-	for (var i = 0; i < keys.length; i++) { values.push(jsonObj[keys[i]]); }
+	xhr.onreadystatechange = function () {  
+		if (xhr.readyState === 4 && xhr.status === 200) {  
+				jsonObj = JSON.parse(xhr.responseText);
 
-	updateDiagram( keys, values );
+				var keys = Object.keys(jsonObj);
+
+				var answerLabels = new Array(keys[0]);
+				var answerValues = [jsonObj.answers];
+
+				var questionLabels = new Array(keys[11], keys[1], keys[2], keys[9], keys[10]);
+				var questionValues = new Array(jsonObj.questions, jsonObj.lectureQuestions, jsonObj.preparationQuestions, jsonObj.interposedQuestions, jsonObj.conceptQuestions);
+
+				var userLabels = new Array(keys[5], keys[6], keys[7], keys[8]);
+				var userValues = new Array(jsonObj.creators, jsonObj.activeUsers, jsonObj.activeStudents, jsonObj.loggedinUsers);
+
+				var sessionLabels = new Array(keys[12], keys[3], keys[4]);
+				var sessionValues = new Array(jsonObj.sessions, jsonObj.openSessions, jsonObj.closedSessions);
+
+				updateBarDiagram('#barChartAnswers', answerLabels, answerValues);
+				updateBarDiagram('#barChartQuestions', questionLabels, questionValues);
+				updateBarDiagram('#barChartUsers', userLabels, userValues);
+				updateBarDiagram('#barChartSessions', sessionLabels, sessionValues);
+
+		} else {  
+				console.log("Error", xhr.statusText);  
+		}  
+	};  
+	xhr.send(null);  
 
 	setTimeout(getStatistics, 30000);
 };
 
-var updateDiagram = function(label, value) {
+var updateBarDiagram = function(canvas, diagramLabel, diagramValue) {
 
-	var diagramWidth = $('#appDiv').width()*0.9;
-	$("#myChart").attr('width', diagramWidth);
-	$("#myChart").attr('height', '500');
+	var diagramWidth = $('#appDiv').width()*0.45;
+	$(canvas).attr('width', diagramWidth);
+	$(canvas).attr('height', '500');
 
-	var ctx = $("#myChart").get(0).getContext("2d");
+	var ctx = $(canvas).get(0).getContext("2d");
 
 	var data = {
-		labels: label,
+		labels: diagramLabel,
 		datasets: [
 			{
 				label: "ArsNova Statistics",
@@ -32,7 +53,7 @@ var updateDiagram = function(label, value) {
 				strokeColor: "rgba(220,220,220,1)",
 				highlightFill: "rgba(220,220,220,1)",
 				highlightStroke: "rgba(220,220,220,1)",
-				data: value
+				data: diagramValue
 			}
 		]
 	};	
