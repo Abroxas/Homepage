@@ -1,5 +1,7 @@
 var getStatistics = function() {
 
+	Chart.defaults.global.responsive = true;
+
 	var jsonObj;
 	var xhr = new XMLHttpRequest();
 	xhr.open("GET","https://arsnova.eu/api/statistics/", true);
@@ -38,9 +40,9 @@ var getStatistics = function() {
 
 var updateBarDiagram = function(canvas, diagramLabel, diagramValue) {
 
-	var diagramWidth = $('#appDiv').width()*0.45;
+	var diagramWidth = $('#appDiv').width()*0.95;
 	$(canvas).attr('width', diagramWidth);
-	$(canvas).attr('height', '500');
+	$(canvas).attr('height', '300');
 
 	var ctx = $(canvas).get(0).getContext("2d");
 
@@ -59,6 +61,7 @@ var updateBarDiagram = function(canvas, diagramLabel, diagramValue) {
 	};	
 
 	var myBarChart = new Chart(ctx).Bar(data);
+	$(canvas).css({"width": diagramWidth, "margin-bottom":"40px"});
 };
 
 $(document).ready(function() { getStatistics(); });
