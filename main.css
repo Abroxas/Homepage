@@ -153,7 +153,6 @@ h1, h2, h3, h4, p, a {
 	margin-bottom: 50px;
 }
 
-.rightDiagram {
-	display: inline;
-	margin-left: 50px;
+#appDiv h1{
+	margin-bottom: 50px;
 }
